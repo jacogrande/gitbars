@@ -5,9 +5,7 @@
 
 		<title>BARS</title>
 		<style type="text/css">
-		  div{
-		    overflow:scroll;
-		  }
+
       .upvoter{
         position: absolute;
         right:10%;
@@ -20,10 +18,18 @@
 		</style>
 	</head>
 	<body>
+    <div>
+      <table id="tabs">
+        <th>Local</th>
+        <th>National</th>
+        <th>International</th>
+        <th>Login</th>
+      </table>
+    </div>
+
     <button onclick = "runTrack()">Play this boi</button>
     <button onclick = "pauseTrack()">Pause this boi</button>
     <button onclick = "restartTrack()">Restart this boi</button>
-		<h2 id="login">login</h2>
 		<table id="songprod" style="width:80%">
 			<tr>
 				<th>Song:</th>
