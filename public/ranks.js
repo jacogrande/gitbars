@@ -42,6 +42,7 @@ var audioPlaying = false;
 var queue = [];
 
 function restartTrack(){
+  audio.pause();
   audio.currentTime = 0;
   runTrack();
 }
@@ -67,6 +68,8 @@ function runTrack(){
       startTimes[i] = sections[i].start_time;
       endTimes[i] = sections[i].end_time;
       queue[i] = new Audio(queue[i]);
+      queue[i].volume = 0.6;
+      console.log(queue[i].volume);
       queue[i].load();
     }
 
@@ -87,12 +90,12 @@ function runTrack(){
         playedOnce = true;
       }
       if(cTime === endTimes[inc]){
-        console.log("pause the boi");
         playPromise.then(()=>{
+          console.log("pause the boi");
           queue[inc].pause();
           playedOnce = false;
+          inc++;
         });
-        inc++;
       }
     },100);
 
@@ -115,7 +118,7 @@ function displaySorted(){
 
   // populator
   for(var i = 0; i < beat.sections.length; i++){
-    if(beat.sections.length >= 4){
+    if(beat.sections.length >= 5){
       break;
     }
     else{
