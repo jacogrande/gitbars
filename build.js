@@ -59,7 +59,13 @@ app.post("/upvoteBars",function(req,res){
   var sectionId = req.body.sectionId;
   var author = req.body.author;
   var beatId = req.body.beatId;
-  db.upvoteBars(beatId, sectionId, author);
+  if(req.body.downvote){
+    db.upvoteBars(beatId, sectionId, author, -1);
+  }
+  else{
+    db.upvoteBars(beatId, sectionId, author, 1);
+  }
+
 });
 
 app.listen(PORT,function(){

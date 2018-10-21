@@ -168,6 +168,15 @@ function displaySorted(){
             barUpvoter.postData("beatId="+beatId+"&sectionId="+splitId[0]+"&author="+sections[parseInt(splitId[0])].bars[parseInt(splitId[1])].author);
             this.removeAttribute("clicked");
           }
+          else{
+            this.src = '/hot_flames.png';
+            var splitId = this.id.split("_");
+            var temp = beat.sections[parseInt(splitId[0])].bars[parseInt(splitId[1])];
+            var temp2 = document.getElementById(divIds[parseInt(splitId[0])]).getElementsByTagName("p");
+            temp2[parseInt(splitId[1])].innerHTML = temp.author + " (" + (temp.rating) + ")";
+            barUpvoter.postData("downvote=true&beatId="+beatId+"&sectionId="+splitId[0]+"&author="+sections[parseInt(splitId[0])].bars[parseInt(splitId[1])].author);
+            this.removeAttribute("clicked");
+          }
         });
         document.getElementById(divIds[a]).appendChild(upvote);
       	document.getElementById(divIds[a]).appendChild(newP);

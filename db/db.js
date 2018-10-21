@@ -45,12 +45,13 @@ function dropBars(author, src, beatId, sectionId){
   updateData("/beats.json");
 }
 
-function upvoteBars(beatId, sectionId, author){
+function upvoteBars(beatId, sectionId, author, value){
   getData("/beats.json");
   var temp = data.beats[beatId].sections[sectionId].bars;
   for(var i = 0; i < temp.length; i++){
     if(temp[i].author === author){
-      temp[i].rating++;
+      console.log(value);
+      temp[i].rating+=value;
     }
   }
   updateData("/beats.json");
