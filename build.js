@@ -56,6 +56,7 @@ app.post("/comment",function(req,res){
 });
 
 app.post("/upvoteBars",function(req,res){
+  console.log("yo");
   var sectionId = req.body.sectionId;
   var author = req.body.author;
   var beatId = req.body.beatId;
