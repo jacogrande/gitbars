@@ -16,6 +16,12 @@
           "comment": "hot track",
           "rating": 0,
           "id": 1
+        },
+        {
+          "author": "does this work",
+          "comment": "my man",
+          "rating": 0,
+          "id": 2
         }
       ],
       "sections": [
@@ -27,7 +33,7 @@
             {
               "author": "rapper 1",
               "src": "bar_files/tingguy.mp3",
-              "rating": 55
+              "rating": 56
             },
             {
               "author": "rapper 2",
@@ -37,12 +43,12 @@
             {
               "author": "rapper 3",
               "src": "bar_files/tingguy.mp3",
-              "rating": 19
+              "rating": 20
             },
             {
               "author": "rapper 4",
               "src": "bar_files/tingguy.mp3",
-              "rating": 114
+              "rating": 116
             }
           ]
         },
@@ -54,7 +60,7 @@
             {
               "author": "rapper 1",
               "src": "bar_files/tingguy.mp3",
-              "rating": 26
+              "rating": 27
             },
             {
               "author": "rapper 2",

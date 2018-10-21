@@ -49,9 +49,9 @@
         var allBeats = document.getElementById("allBeats");
         var row;
         var td;
-        for(var y = 0; y < 2; y++){
+        for(var y = 0; y < beatData.length/2; y++){
           row = document.createElement("tr");
-          for(var x = 0; x < 2; x++){
+          for(var x = 0; x < beatData.length/2; x++){
             td = document.createElement("td");
             td.className = "beat";
             td.innerHTML = beatData[0].name;

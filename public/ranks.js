@@ -67,23 +67,31 @@ function runTrack(){
       startTimes[i] = sections[i].start_time;
       endTimes[i] = sections[i].end_time;
       queue[i] = new Audio(queue[i]);
+      queue[i].load();
     }
 
     audio.play();
 
     var inc = 0;
     var cTime;
+    var playPromise;
+    var playedOnce = false;
     // timer
     var update = setInterval(function(){
       // gets current song time
       cTime = Math.floor(audio.currentTime);
       // checks current time against time stamps
-      if(cTime == startTimes[inc]){
-        queue[inc].play();
+      if(cTime == startTimes[inc] && !playedOnce){
+        console.log("yo");
+        playPromise = queue[inc].play();
+        playedOnce = true;
       }
       if(cTime === endTimes[inc]){
-        queue[inc].pause();
-        // moves to next section
+        console.log("pause the boi");
+        playPromise.then(()=>{
+          queue[inc].pause();
+          playedOnce = false;
+        });
         inc++;
       }
     },100);
@@ -176,7 +184,7 @@ function displaySorted(){
 
         upvote.addEventListener('click',function(){
           if(this.getAttribute("clicked")){
-            this.src = 'hot_flames_activated.png';
+            this.src = '/hot_flames_activated.png';
             var splitId = this.id.split("_");
             var temp = beat.sections[parseInt(splitId[0])].bars[parseInt(splitId[1])];
             var temp2 = document.getElementById(divIds[parseInt(splitId[0])]).getElementsByTagName("p");
