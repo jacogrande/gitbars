@@ -3,7 +3,7 @@ var express = require("express");
 var app = express();
 var db = require("./db/db.js");
 var beats = require("./db/beats.js");
-var config = requre("./config.js");
+var config = require("./config.js");
 var bodyParser = require("body-parser");
 
   // ********** //
