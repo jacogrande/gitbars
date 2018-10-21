@@ -84,9 +84,8 @@
         var author = document.getElementById("author").value;
         var comment = document.getElementById("comment").value;
         if(author.length > 0 && comment.length > 0){
-
           commentParser.postData("author="+author+"&comment="+comment+"&beat="+beatId);
-          
+
           var commentDiv = document.createElement("div");
           commentDiv.className = "comment";
           var authorP = document.createElement("p");

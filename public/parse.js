@@ -28,7 +28,6 @@ function Parser(src){
   // "identifier="data&"identifier2="data2
   this.postData = function(data){
     var xhttp = new XMLHttpRequest();
-    console.log(data);
     xhttp.open("POST",src, true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(data);
@@ -44,7 +43,7 @@ userParser.getFile();
 var beatParser = new Parser("/beats");
 beatParser.getFile();
 
-var barUpvoter = new Parser("./upvoteBars");
+var barUpvoter = new Parser("/upvoteBars");
 
 // comments
 var commentParser = new Parser("/comment");
