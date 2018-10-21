@@ -62,6 +62,6 @@ app.post("/upvoteBars",function(req,res){
   db.upvoteBars(beatId, sectionId, author);
 });
 
-app.listen(PORT,"localhost",function(){
+app.listen(PORT,function(){
   console.log("socket to me... ");
 });
