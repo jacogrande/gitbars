@@ -73,7 +73,7 @@ function runTrack(){
       for(var i = 0; i < sections.length; i++){
         queue[i] = beat.sections[i].bars[0].src;
         temp = document.getElementById(divIds[i]).getElementsByTagName("p");
-        temp[0].style.backgroundColor = "rgb(91, 90, 109)";
+        temp[0].style.backgroundColor = "rgb(102, 114, 138)";
       }
     }
     // populates all queue data
@@ -173,14 +173,13 @@ function displaySorted(){
           queue[parseInt(splitId[0])] = beat.sections[parseInt(splitId[0])].bars[parseInt(splitId[1])].src;
           var temp = document.getElementById(divIds[parseInt(splitId[0])]).getElementsByTagName("p");
           for(var i = 0; i < temp.length; i++){
-            temp[i].style.background = "rgb(71, 80, 99)";
+            temp[i].style.background = "rgb(86, 97, 119)";
           }
-          this.style.background = "rgb(91, 90, 109)";
+          this.style.background = "rgb(102, 114, 138)";
         });
 
         upvote.addEventListener('click',function(){
           if(this.getAttribute("clicked")){
-            console.log("yo");
             this.src = '/hot_flames_activated.png';
             var splitId = this.id.split("_");
             var temp = beat.sections[parseInt(splitId[0])].bars[parseInt(splitId[1])];

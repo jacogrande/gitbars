@@ -2,7 +2,7 @@
   "beats": [
     {
       "name": "Cosmic Bars",
-      "author": "Ham",
+      "author": "Lil' Tuft Fej",
       "src": "/song_files/gitCosmicBars.mp3",
       "comments": [],
       "sections": [
@@ -12,12 +12,12 @@
           "end_time": 27,
           "bars": [
             {
-              "author": "Ham",
+              "author": "Lil' Tuft Fej",
               "src": "bar_files/ham1.mp3",
               "rating": 0
             },
             {
-              "author": "Tri",
+              "author": "Lil' Honda",
               "src": "bar_files/tribars.mp3",
               "rating": 1
             },
@@ -34,12 +34,12 @@
           "end_time": 53,
           "bars": [
             {
-              "author": "Ham",
+              "author": "Lil' Tuft Fej",
               "src": "bar_files/ham2.mp3",
               "rating": 1
             },
             {
-              "author": "Tri",
+              "author": "Lil Honda",
               "src": "bar_files/tribars.mp3",
               "rating": 0
             },
@@ -56,12 +56,12 @@
           "end_time": 80,
           "bars": [
             {
-              "author": "Ham",
+              "author": "Lil' Tuft Fej",
               "src": "bar_files/ham3.mp3",
               "rating": 1
             },
             {
-              "author": "Tri",
+              "author": "Lil Honda",
               "src": "bar_files/tribars.mp3",
               "rating": 0
             },
@@ -83,12 +83,12 @@
               "rating": 1
             },
             {
-              "author": "Tri",
+              "author": "Lil Honda",
               "src": "bar_files/tribars.mp3",
               "rating": 0
             },
             {
-              "author": "Ham",
+              "author": "Lil' Tuft Fej",
               "src": "bar_files/ham1.mp3",
               "rating": 2
             }
