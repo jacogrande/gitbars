@@ -13,7 +13,7 @@
           "bars": [
             {
               "author": "Ham",
-              "src": "bar_files/Ham1.mp3",
+              "src": "bar_files/ham1.mp3",
               "rating": 2
             },
             {
@@ -35,7 +35,7 @@
           "bars": [
             {
               "author": "Ham",
-              "src": "bar_files/Ham2.mp3",
+              "src": "bar_files/ham2.mp3",
               "rating": 1
             },
             {
@@ -57,7 +57,7 @@
           "bars": [
             {
               "author": "Ham",
-              "src": "bar_files/Ham3.mp3",
+              "src": "bar_files/ham3.mp3",
               "rating": 1
             },
             {
@@ -89,7 +89,7 @@
             },
             {
               "author": "Ham",
-              "src": "bar_files/Ham1.mp3",
+              "src": "bar_files/ham1.mp3",
               "rating": 2
             }
           ]
