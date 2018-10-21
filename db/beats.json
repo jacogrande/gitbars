@@ -17,6 +17,11 @@
               "rating": 2
             },
             {
+              "author": "Tri",
+              "src": "bar_files/tribars.mp3",
+              "rating": 0
+            },
+            {
               "author": "MC Piss Pants",
               "src": "bar_files/tingguy.mp3",
               "rating": 0
@@ -32,6 +37,11 @@
               "author": "Ham",
               "src": "bar_files/Ham2.mp3",
               "rating": 1
+            },
+            {
+              "author": "Tri",
+              "src": "bar_files/tribars.mp3",
+              "rating": 0
             },
             {
               "author": "MC Piss Pants",
@@ -51,6 +61,11 @@
               "rating": 1
             },
             {
+              "author": "Tri",
+              "src": "bar_files/tribars.mp3",
+              "rating": 0
+            },
+            {
               "author": "MC Piss Pants",
               "src": "bar_files/tingguy.mp3",
               "rating": 1
@@ -66,6 +81,16 @@
               "author": "MC Piss Pants",
               "src": "bar_files/tingguy.mp3",
               "rating": 1
+            },
+            {
+              "author": "Tri",
+              "src": "bar_files/tribars.mp3",
+              "rating": 0
+            },
+            {
+              "author": "Ham",
+              "src": "bar_files/Ham1.mp3",
+              "rating": 2
             }
           ]
         }
