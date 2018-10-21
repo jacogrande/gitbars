@@ -19,7 +19,7 @@ function populateComments(){
   var commentDiv;
   var authorP;
   var cText;
-  for(var i = 0; i < beat.length; i++){
+  for(var i = beat.length - 1; i > 0; i-=1){
     commentDiv = document.createElement("div");
     commentDiv.className = "comment";
     authorP = document.createElement("p");
@@ -98,35 +98,6 @@ function runTrack(){
 
 
   }
-
-
-  // var partA=new Audio("tingguy.mp3");
-  // var partB=new Audio("chopine.mp3");
-  // var partC=new Audio("tingguy.mp3");
-  // var partD=new Audio("chopine.mp3");
-  //
-  // var update = setInterval(function() {
-  // 	console.log(Math.floor(audio.currentTime));
-  // 	if(Math.floor(audio.currentTime)==1){
-  // 		partA.play();
-  // 	}else if(Math.floor(audio.currentTime)==27){
-  // 		partB.play();
-  // 	}else if(Math.floor(audio.currentTime)==53){
-  // 		partC.play();
-  // 	}else if(Math.floor(audio.currentTime)==79){
-  // 		partD.play();
-  // 	}
-  // 	if(Math.floor(audio.currentTime)==26){
-  // 		console.log(partA.pause());
-  // 	}else if(Math.floor(audio.currentTime)==52){
-  // 		partB.pause();
-  // 	}else if(Math.floor(audio.currentTime)==78){
-  // 		partC.pause();
-  // 	}else if(Math.floor(audio.currentTime)==104){
-  // 		partD.pause();
-  // 	}
-  //
-  // }, 100);
 }
 
 
@@ -177,9 +148,14 @@ function displaySorted(){
         newP.id = a+"_"+i;
 
         newP.addEventListener("click",function(){
-          this.style.background = "rgb(91, 90, 109)";
+
           var splitId = this.id.split("_");
           queue[parseInt(splitId[0])] = beat.sections[parseInt(splitId[0])].bars[parseInt(splitId[1])].src;
+          var temp = document.getElementById(divIds[parseInt(splitId[0])]).getElementsByTagName("p");
+          for(var i = 0; i < temp.length; i++){
+            temp[i].style.background = "rgb(71, 80, 99)";
+          }
+          this.style.background = "rgb(91, 90, 109)";
         });
 
         upvote.addEventListener('click',function(){
