@@ -6,6 +6,8 @@ var beats = require("./db/beats.js");
 var config = require("./config.js");
 var bodyParser = require("body-parser");
 
+var PORT = process.env.PORT || 3000;
+
   // ********** //
  // middleware //
 // ********** //
@@ -60,6 +62,6 @@ app.post("/upvoteBars",function(req,res){
   db.upvoteBars(beatId, sectionId, author);
 });
 
-app.listen(config.port,"localhost",function(){
+app.listen(PORT,"localhost",function(){
   console.log("socket to me... ");
 });
