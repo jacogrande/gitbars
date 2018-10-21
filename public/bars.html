@@ -27,14 +27,12 @@
       </table>
     </div>
 
-    <button onclick = "runTrack()">Play this boi</button>
-    <button onclick = "pauseTrack()">Pause this boi</button>
-    <button onclick = "restartTrack()">Restart this boi</button>
-		<h2 id="login">Login</h2>
+    <table id="songprod" style="width:50%">
+
 		<table id="songprod" style="width:80%">
 			<tr>
-				<th>Song:</th>
-				<th>Producer:</th>
+        <th>Song: Cosmik Bars</th>
+				<th>Producer: Lil Tuft Fej</th>
 			</tr>
 		</table>
 		<div id="a" >
@@ -52,6 +50,14 @@
 		<div id="d">
 			<h2>Part D</h2>
 		</div>
+
+
+    <div id="button">
+      <button onclick = "runTrack()">Play this boi</button>
+      <button onclick = "pauseTrack()">Pause this boi</button>
+      <button onclick = "restartTrack()">Restart this boi</button>
+    </div>
+
     <div id = "commentSpace">
   		<div id="boxsize">
         <h3>Comments </h3>
@@ -85,7 +91,6 @@
         var comment = document.getElementById("comment").value;
         if(author.length > 0 && comment.length > 0){
           commentParser.postData("author="+author+"&comment="+comment+"&beat="+beatId);
-
           var commentDiv = document.createElement("div");
           commentDiv.className = "comment";
           var authorP = document.createElement("p");

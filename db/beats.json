@@ -4,50 +4,7 @@
       "name": "Cosmic Bars",
       "author": "Lil' Tuft Fej",
       "src": "/song_files/gitCosmicBars.mp3",
-      "comments": [
-        {
-          "author": "my boi",
-          "comment": "test",
-          "rating": 0,
-          "id": 0
-        },
-        {
-          "author": "test",
-          "comment": "yo",
-          "rating": 0,
-          "id": 1
-        },
-        {
-          "author": "a",
-          "comment": "a",
-          "rating": 0,
-          "id": 2
-        },
-        {
-          "author": "yo",
-          "comment": "yo",
-          "rating": 0,
-          "id": 3
-        },
-        {
-          "author": "does it work",
-          "comment": "yo",
-          "rating": 0,
-          "id": 4
-        },
-        {
-          "author": "testing",
-          "comment": "testing",
-          "rating": 0,
-          "id": 5
-        },
-        {
-          "author": "testing",
-          "comment": "testing",
-          "rating": 0,
-          "id": 6
-        }
-      ],
+      "comments": [],
       "sections": [
         {
           "name": "A",
@@ -62,7 +19,7 @@
             {
               "author": "Lil' Honda",
               "src": "bar_files/tribars.mp3",
-              "rating": 1
+              "rating": 0
             },
             {
               "author": "MC Piss Pants",
@@ -79,7 +36,7 @@
             {
               "author": "Lil' Tuft Fej",
               "src": "bar_files/ham2.mp3",
-              "rating": 1
+              "rating": 0
             },
             {
               "author": "Lil Honda",
@@ -89,7 +46,7 @@
             {
               "author": "MC Piss Pants",
               "src": "bar_files/tingguy.mp3",
-              "rating": 1
+              "rating": 0
             }
           ]
         },
@@ -101,7 +58,7 @@
             {
               "author": "Lil' Tuft Fej",
               "src": "bar_files/ham3.mp3",
-              "rating": 1
+              "rating": 0
             },
             {
               "author": "Lil Honda",
@@ -111,7 +68,7 @@
             {
               "author": "MC Piss Pants",
               "src": "bar_files/tingguy.mp3",
-              "rating": 1
+              "rating": 0
             }
           ]
         },
@@ -123,7 +80,7 @@
             {
               "author": "MC Piss Pants",
               "src": "bar_files/tingguy.mp3",
-              "rating": 1
+              "rating": 0
             },
             {
               "author": "Lil Honda",
@@ -133,7 +90,7 @@
             {
               "author": "Lil' Tuft Fej",
               "src": "bar_files/ham1.mp3",
-              "rating": 2
+              "rating": 0
             }
           ]
         }

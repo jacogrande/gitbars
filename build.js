@@ -49,7 +49,6 @@ app.get('/ip',function(req,res){
 
 // adds a comment
 app.post("/comment",function(req,res){
-  console.log("yo");
   var comment = req.body.comment;
   var author = req.body.author;
   var beat = req.body.beat;
