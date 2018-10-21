@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles.css">
+
+		<title>BARS</title>
+		<style type="text/css">
+		  div{
+		    overflow:scroll;
+		  }
+      .upvoter{
+        position: absolute;
+        right:10%;
+        width:20px;
+        height:20px;
+      }
+      h2{
+        color:white;
+      }
+		</style>
+	</head>
+	<body>
+    <button onclick = "runTrack()">Play this boi</button>
+    <button onclick = "pauseTrack()">Pause this boi</button>
+    <button onclick = "restartTrack()">Restart this boi</button>
+		<h2 id="login">login</h2>
+		<table id="songprod" style="width:80%">
+			<tr>
+				<th>Song:</th>
+				<th>Producer:</th>
+			</tr>
+		</table>
+		<div id="a" >
+			<h2>Part A</h2>
+
+		</div>
+
+		<div id="b">
+			<h2>Part B</h2>
+		</div>
+
+		<div id="c">
+			<h2>Part C</h2>
+		</div>
+
+		<div id="d">
+			<h2>Part D</h2>
+		</div>
+    <div id = "commentSpace">
+  		<h3>Comments </h3>
+  		<div id="boxsize">
+          <input id = 'author' type = "text" name = 'author' placeholder="author"><br><br>
+  	  		<input id="comment" type="text" name="comment" placeholder="comment">
+    			<button onclick = "commentActivate()">Post</button>
+  		</div>
+      <div id = 'commentBox'>
+      </div>
+  		<p id="psect"></p>
+    </div>
+		<script>
+
+      function hideSite(){
+        document.getElementsByTagName("BODY")[0].style.visibility = "hidden";
+      }
+      function showSite(){
+        document.getElementsByTagName("BODY")[0].style.visibility = "visible";
+      }
+
+      hideSite();
+
+
+      function start(){
+        displaySorted();
+        populateComments();
+      }
+
+      function commentActivate(){
+        var author = document.getElementById("author").value;
+        var comment = document.getElementById("comment").value;
+        commentParser.postData("author="+author+"&comment="+comment+"&beat="+beatId);
+        // console.log("author="+author+"&comment="+comment+"&beat="+beatId);
+      }
+
+			var com;
+			function comments(){
+				com = document.getElementById("comment");
+				var newpp=document.getElementById("psect");
+				newpp.innerHTML=com.value;
+			}
+
+      var len;
+      var finished = false;
+      var loading = setInterval(function(){
+        len = parserList.length;
+        finished = true;
+        while(len--){
+          // console.log(parserList[len].isFinished());
+          if(!parserList[len].isFinished()){
+            finished = false;
+          }
+        }
+        if(finished){
+          console.log("db loaded...");
+          showSite();
+          start();
+          clearInterval(loading);
+        }
+      },10);
+
+		</script>
+    <script type="text/javascript" src = 'parse.js'></script>
+		<script type="text/javascript" src = 'ranks.js'></script>
+	</body>
+
+</html>

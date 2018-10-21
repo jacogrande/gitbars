@@ -1,0 +1,42 @@
+{
+  "beats": [
+    {
+      "name": "Test Beat",
+      "author": "test_boi",
+      "src": "song_files/'hop, the pyramid.m4a'",
+      "comments": [
+        {
+          "author": "test_boi",
+          "comment": "hot new track",
+          "rating": 4,
+          "id": 0
+        },
+        {
+          "author": "test_boi_2",
+          "comment": "this is decent",
+          "rating": 2,
+          "id": 1
+        }
+      ],
+      "sections": [
+        {
+          "name": "A",
+          "start_time": 0,
+          "end_time": 0.3,
+          "bars": [
+            {
+              "author": "rapper 1",
+              "src": "bar_files/test1.mp3",
+              "rating": 4
+            },
+            {
+              "author": "jp",
+              "src": "none",
+              "rating": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

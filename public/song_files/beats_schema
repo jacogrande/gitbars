@@ -1,0 +1,26 @@
+{
+  "beats":[
+    {
+      "name":"Test Beat",
+      "author":"test_boi",
+      "src":"song_files/'hop, the pyramid.m4a'",
+      "comments":[
+        {
+          "author":"test_boi",
+          "comment":"hot new track",
+          "rating":4
+        }
+      ],
+      "sections":[
+        {
+          "name":"A",
+          "bars":[
+            {
+              ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

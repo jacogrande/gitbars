@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hackathon?</title>
+    <style>
+      #allBeats{
+        position: absolute;
+        top:8%;
+        left:4.5%;
+        height:84%;
+        width:91%;
+      }
+      .beat{
+        border: 1px solid black;
+        border-radius:5px;
+        padding:10% 10% 10% 10%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <table id = 'allBeats'>
+      <tbody>
+
+      </tbody>
+    </table>
+
+    <div id = 'result'></div>
+
+    <script src = 'parse.js'></script>
+
+    <script>
+
+      function hideSite(){
+        document.getElementsByTagName("BODY")[0].style.visibility = "hidden";
+      }
+
+      function showSite(){
+        document.getElementsByTagName("BODY")[0].style.visibility = "visible";
+      }
+
+      function start(){
+        var result = document.getElementById("result");
+        var beatData = beatParser.getData().beats;
+        // result.innerHTML += beatData.name + "\n" + beatData.author + "\n";
+
+        var allBeats = document.getElementById("allBeats");
+        var row;
+        var td;
+        for(var y = 0; y < 2; y++){
+          row = document.createElement("tr");
+          for(var x = 0; x < 2; x++){
+            td = document.createElement("td");
+            td.className = "beat";
+            td.innerHTML = beatData[0].name;
+            td.addEventListener("click",function(){
+              // console.log("yo");
+              window.location.href = "beat?id="+JSON.parse(x);
+            });
+            row.appendChild(td);
+          }
+          allBeats.appendChild(row);
+        }
+      }
+
+      // don't start program until everything is ready
+      var len;
+      var finished = false;
+      hideSite();
+      var loading = setInterval(function(){
+        len = parserList.length;
+        finished = true;
+        while(len--){
+          if(!parserList[len].isFinished()){
+            finished = false;
+          }
+        }
+        if(finished){
+          console.log("db loaded...");
+          start();
+          showSite();
+          clearInterval(loading);
+        }
+      },10);
+
+    </script>
+
+  </body>
+</html>
