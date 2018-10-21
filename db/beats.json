@@ -4,105 +4,93 @@
       "name": "Cosmic Bars",
       "author": "Ham",
       "src": "/song_files/gitCosmicBars.mp3",
-      "comments": [
-        {
-          "author": "hot track, yo",
-          "comment": "hot track, yo",
-          "rating": 0,
-          "id": 0
-        },
-        {
-          "author": "big boi",
-          "comment": "hot track",
-          "rating": 0,
-          "id": 1
-        },
-        {
-          "author": "does this work",
-          "comment": "my man",
-          "rating": 0,
-          "id": 2
-        }
-      ],
+      "comments": [],
       "sections": [
         {
           "name": "A",
-          "start_time": 3,
-          "end_time": 10,
+          "start_time": 2,
+          "end_time": 27,
           "bars": [
             {
-              "author": "rapper 1",
-              "src": "bar_files/tingguy.mp3",
-              "rating": 57
+              "author": "Ham",
+              "src": "bar_files/ham1.mp3",
+              "rating": 2
             },
             {
-              "author": "rapper 2",
-              "src": "bar_files/tingguy.mp3",
-              "rating": 4
+              "author": "Tri",
+              "src": "bar_files/tribars.mp3",
+              "rating": 0
             },
             {
-              "author": "rapper 3",
+              "author": "MC Piss Pants",
               "src": "bar_files/tingguy.mp3",
-              "rating": 20
-            },
-            {
-              "author": "rapper 4",
-              "src": "bar_files/tingguy.mp3",
-              "rating": 121
+              "rating": 0
             }
           ]
         },
         {
           "name": "B",
-          "start_time": 11,
-          "end_time": 55,
+          "start_time": 28,
+          "end_time": 53,
           "bars": [
             {
-              "author": "rapper 1",
-              "src": "bar_files/tingguy.mp3",
-              "rating": 27
+              "author": "Ham",
+              "src": "bar_files/ham2.mp3",
+              "rating": 1
             },
             {
-              "author": "rapper 2",
-              "src": "bar_files/tingguy.mp3",
-              "rating": 25
+              "author": "Tri",
+              "src": "bar_files/tribars.mp3",
+              "rating": 0
             },
             {
-              "author": "rapper 3",
+              "author": "MC Piss Pants",
               "src": "bar_files/tingguy.mp3",
-              "rating": 17
-            },
-            {
-              "author": "rapper 4",
-              "src": "bar_files/tingguy.mp3",
-              "rating": 90
+              "rating": 1
             }
           ]
         },
         {
           "name": "C",
-          "start_time": 0,
-          "end_time": 0.3,
+          "start_time": 54,
+          "end_time": 80,
           "bars": [
             {
-              "author": "rapper 1",
-              "src": "bar_files/tingguy.mp3",
-              "rating": 11
+              "author": "Ham",
+              "src": "bar_files/ham3.mp3",
+              "rating": 1
             },
             {
-              "author": "rapper 2",
-              "src": "bar_files/tingguy.mp3",
-              "rating": 3
+              "author": "Tri",
+              "src": "bar_files/tribars.mp3",
+              "rating": 0
             },
             {
-              "author": "rapper 3",
+              "author": "MC Piss Pants",
               "src": "bar_files/tingguy.mp3",
-              "rating": 17
+              "rating": 1
+            }
+          ]
+        },
+        {
+          "name": "D",
+          "start_time": 81,
+          "end_time": 114,
+          "bars": [
+            {
+              "author": "MC Piss Pants",
+              "src": "bar_files/tingguy.mp3",
+              "rating": 1
             },
             {
-              "author": "rapper 4",
-              "src": "bar_files/tingguy.mp3",
-              "rating": 84
+              "author": "Tri",
+              "src": "bar_files/tribars.mp3",
+              "rating": 0
+            },
+            {
+              "author": "Ham",
+              "src": "bar_files/ham1.mp3",
+              "rating": 2
             }
           ]
         }
