@@ -12,6 +12,7 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+// creates comments
 function populateComments(){
   var beat = beatParser.getData().beats[beatId];
   beat = beat.comments;
@@ -34,6 +35,7 @@ function populateComments(){
   }
 
 }
+
 
 var beatId = getParameterByName("id");
 
@@ -58,6 +60,7 @@ function pauseTrack(){
 var audioPos = 0;
 
 function runTrack(){
+  // if the audio isn't playing
   if(!audioPlaying){
     var beat = beatParser.getData().beats[beatId];
     var sections = beat.sections;
@@ -65,9 +68,12 @@ function runTrack(){
     var endTimes = [];
 
 
+    // new audio
     audio=new Audio(beat.src);
     audio.currentTime = audioPos;
 
+
+    // fills queue with top
     var temp;
     if(queue.length === 0){
       for(var i = 0; i < sections.length; i++){

@@ -2,6 +2,7 @@ var fs = require("fs");
 
 var data;
 
+// fetches data
 function getData(src){
   data = JSON.parse(fs.readFileSync('./db/' + src, 'utf8'));
 }
@@ -27,6 +28,7 @@ function addBeat(beat){
   updateData("/beats.json");
 }
 
+// creates new comment
 function comment(author, comment, beatId){
   getData("/beats.json");
   data.beats[parseInt(beatId)].comments.push({"author":author,"comment":comment,"rating":0,"id":data.beats[parseInt(beatId)].comments.length});

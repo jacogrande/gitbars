@@ -86,6 +86,8 @@
         populateComments();
       }
 
+
+      // makes new comment
       function commentActivate(){
         var author = document.getElementById("author").value;
         var comment = document.getElementById("comment").value;
@@ -117,6 +119,7 @@
 
       var len;
       var finished = false;
+      // loads page
       var loading = setInterval(function(){
         len = parserList.length;
         finished = true;
