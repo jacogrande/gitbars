@@ -43,7 +43,7 @@ userParser.getFile();
 var beatParser = new Parser("/beats");
 beatParser.getFile();
 
-var barUpvoter = new Parser("/upvoteBars");
+var barUpvoter = new Parser("./upvoteBars");
 
 // comments
 var commentParser = new Parser("/comment");
