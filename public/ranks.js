@@ -49,10 +49,13 @@ function restartTrack(){
 
 function pauseTrack(){
   if(audioPlaying){
+    audioPos = audio.currentTime;
     audio.pause();
     audioPlaying = false;
   }
 }
+
+var audioPos = 0;
 
 function runTrack(){
   if(!audioPlaying){
@@ -61,19 +64,33 @@ function runTrack(){
     var startTimes = [];
     var endTimes = [];
 
-    audio=new Audio(beat.src);
 
+    audio=new Audio(beat.src);
+    audio.currentTime = audioPos;
+
+    var temp;
+    if(queue.length === 0){
+      for(var i = 0; i < sections.length; i++){
+        queue[i] = beat.sections[i].bars[0].src;
+        temp = document.getElementById(divIds[i]).getElementsByTagName("p");
+        temp[0].style.backgroundColor = "rgb(91, 90, 109)";
+      }
+    }
     // populates all queue data
-    for(var i = 0; i < sections.length; i++){
-      startTimes[i] = sections[i].start_time;
-      endTimes[i] = sections[i].end_time;
-      queue[i] = new Audio(queue[i]);
-      queue[i].volume = 0.6;
-      console.log(queue[i].volume);
-      queue[i].load();
+    if(!(queue[0] instanceof Audio)){
+      for(var i = 0; i < sections.length; i++){
+        startTimes[i] = sections[i].start_time;
+        endTimes[i] = sections[i].end_time;
+        queue[i] = new Audio(queue[i]);
+        queue[i].volume = 0.65;
+        console.log(queue[i].volume);
+        queue[i].load();
+      }
     }
 
+
     audio.play();
+    audioPlaying = true;
 
     var inc = 0;
     var cTime;
@@ -103,13 +120,13 @@ function runTrack(){
   }
 }
 
+var divIds = ["a","b","c","d"];
 
 function displaySorted(){
 
   var beat = beatParser.getData().beats[beatId];
 
   //preparing variables for each div
-  var divIds = ["a","b","c","d"];
 
 
 
@@ -163,6 +180,7 @@ function displaySorted(){
 
         upvote.addEventListener('click',function(){
           if(this.getAttribute("clicked")){
+            console.log("yo");
             this.src = '/hot_flames_activated.png';
             var splitId = this.id.split("_");
             var temp = beat.sections[parseInt(splitId[0])].bars[parseInt(splitId[1])];
@@ -172,13 +190,14 @@ function displaySorted(){
             this.removeAttribute("clicked");
           }
           else{
+            // console.log("yo");
             this.src = '/hot_flames.png';
             var splitId = this.id.split("_");
             var temp = beat.sections[parseInt(splitId[0])].bars[parseInt(splitId[1])];
             var temp2 = document.getElementById(divIds[parseInt(splitId[0])]).getElementsByTagName("p");
             temp2[parseInt(splitId[1])].innerHTML = temp.author + " (" + (temp.rating) + ")";
             barUpvoter.postData("downvote=true&beatId="+beatId+"&sectionId="+splitId[0]+"&author="+sections[parseInt(splitId[0])].bars[parseInt(splitId[1])].author);
-            this.removeAttribute("clicked");
+            this.setAttribute("clicked",false);
           }
         });
         document.getElementById(divIds[a]).appendChild(upvote);

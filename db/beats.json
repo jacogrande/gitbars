@@ -14,12 +14,12 @@
             {
               "author": "Ham",
               "src": "bar_files/ham1.mp3",
-              "rating": 2
+              "rating": 0
             },
             {
               "author": "Tri",
               "src": "bar_files/tribars.mp3",
-              "rating": 0
+              "rating": 1
             },
             {
               "author": "MC Piss Pants",

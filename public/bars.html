@@ -23,7 +23,7 @@
     <button onclick = "runTrack()">Play this boi</button>
     <button onclick = "pauseTrack()">Pause this boi</button>
     <button onclick = "restartTrack()">Restart this boi</button>
-		<h2 id="login">login</h2>
+		<h2 id="login">Login</h2>
 		<table id="songprod" style="width:80%">
 			<tr>
 				<th>Song:</th>
@@ -77,8 +77,23 @@
       function commentActivate(){
         var author = document.getElementById("author").value;
         var comment = document.getElementById("comment").value;
-        commentParser.postData("author="+author+"&comment="+comment+"&beat="+beatId);
-        // console.log("author="+author+"&comment="+comment+"&beat="+beatId);
+        if(author.length > 0 && comment.length > 0){
+          commentParser.postData("author="+author+"&comment="+comment+"&beat="+beatId);
+          var commentDiv = document.createElement("div");
+          commentDiv.className = "comment";
+          var authorP = document.createElement("p");
+          authorP.className = "author";
+          authorP.innerHTML = author;
+          commentDiv.appendChild(authorP);
+          var cText = document.createElement("p");
+          cText.className = "cText";
+          cText.innerHTML = comment;
+          commentDiv.appendChild(cText);
+          document.getElementById("commentBox").appendChild(commentDiv);
+          document.getElementById("author").value = "";
+          document.getElementById("comment").value = "";
+        }
+
       }
 
 			var com;
