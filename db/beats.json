@@ -4,7 +4,14 @@
       "name": "Cosmik Bars",
       "author": "Lil' Tuft Fej",
       "src": "/song_files/gitCosmicBars.mp3",
-      "comments": [],
+      "comments": [
+        {
+          "author": " ",
+          "comment": " ",
+          "rating": 0,
+          "id": 0
+        }
+      ],
       "sections": [
         {
           "name": "A",
@@ -14,7 +21,7 @@
             {
               "author": "Lil' Tuft Fej",
               "src": "bar_files/ham1.mp3",
-              "rating": 0
+              "rating": 1
             },
             {
               "author": "Lil' Honda",
@@ -36,7 +43,7 @@
             {
               "author": "Lil' Tuft Fej",
               "src": "bar_files/ham2.mp3",
-              "rating": 0
+              "rating": 1
             },
             {
               "author": "Lil Honda",
@@ -58,7 +65,7 @@
             {
               "author": "Lil' Tuft Fej",
               "src": "bar_files/ham3.mp3",
-              "rating": 0
+              "rating": 1
             },
             {
               "author": "Lil Honda",
@@ -80,7 +87,7 @@
             {
               "author": "MC Piss Pants",
               "src": "bar_files/tingguy.mp3",
-              "rating": 0
+              "rating": 1
             },
             {
               "author": "Lil Honda",

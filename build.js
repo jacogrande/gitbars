@@ -5,6 +5,7 @@ var db = require("./db/db.js");
 var beats = require("./db/beats.js");
 var config = require("./config.js");
 var bodyParser = require("body-parser");
+var sha1 = require("js-sha1");
 
 var PORT = process.env.PORT || 3000;
 
@@ -45,6 +46,10 @@ app.get("/beats",function(req,res){
 
 app.get('/ip',function(req,res){
   res.send(request.connection.remoteAddress);
+});
+
+app.get("/login",function(req,res){
+  res.sendFile(__dirname+"/public/login.html");
 });
 
 // adds a comment

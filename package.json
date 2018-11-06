@@ -5,9 +5,12 @@
   "main": "build.js",
   "author": "Jackson Prowell",
   "license": "ISC",
-  "scripts":{"start":"node build.js"},
+  "scripts": {
+    "start": "node build.js"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "js-sha1": "^0.6.0"
   }
 }

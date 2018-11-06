@@ -165,7 +165,7 @@ function displaySorted(){
       	var newP=document.createElement("p");
         var upvote = document.createElement("img");
         upvote.className = 'upvoter';
-        upvote.src = 'hot_flames.png';
+        upvote.src = './resources/hot_flames.png';
         upvote.id = a+"_"+i;
         upvote.setAttribute("clicked",false);
         upvote.style.cursor = "pointer";
@@ -186,7 +186,7 @@ function displaySorted(){
 
         upvote.addEventListener('click',function(){
           if(this.getAttribute("clicked")){
-            this.src = '/hot_flames_activated.png';
+            this.src = './resources//hot_flames_activated.png';
             var splitId = this.id.split("_");
             var temp = beat.sections[parseInt(splitId[0])].bars[parseInt(splitId[1])];
             var temp2 = document.getElementById(divIds[parseInt(splitId[0])]).getElementsByTagName("p");
@@ -196,7 +196,7 @@ function displaySorted(){
           }
           else{
             // console.log("yo");
-            this.src = '/hot_flames.png';
+            this.src = './resources//hot_flames.png';
             var splitId = this.id.split("_");
             var temp = beat.sections[parseInt(splitId[0])].bars[parseInt(splitId[1])];
             var temp2 = document.getElementById(divIds[parseInt(splitId[0])]).getElementsByTagName("p");
