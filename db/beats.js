@@ -23,6 +23,8 @@ function Beat(author, src, name){
     };
   }
 
+  console.log("testing");
+
 }
 
 module.exports = {
