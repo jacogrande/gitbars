@@ -36,21 +36,82 @@ app.get("/beat",function(req,res){
   res.sendFile(__dirname + "/public/bars.html")
 });
 
-app.get("/users",function(req,res){
-  res.send(db.getUsers());
+app.get("/account",function(req,res){
+  res.sendFile(__dirname + "/public/account.html");
+})
+
+app.get("/login",function(req,res){
+  res.sendFile(__dirname+"/public/login.html");
 });
+
+app.get("/register",function(req,res){
+  res.sendFile(__dirname+"/public/register.html");
+});
+
+  // *********** //
+ //  accessors  //
+// *********** //
+
+app.get("/accountData",function(req,res){
+  key=req.query.key;
+  res.send(db.getUser(key).public);
+});
+
 
 app.get("/beats",function(req,res){
   res.send(db.getBeats());
 });
 
-app.get('/ip',function(req,res){
-  res.send(request.connection.remoteAddress);
-});
+  // ************ //
+ //   mutators   //
+// ************ //
 
-app.get("/login",function(req,res){
-  res.sendFile(__dirname+"/public/login.html");
-});
+app.post("/login",function(req,res){
+  var username = req.body.username;
+  var password = req.body.password;
+  password += username;
+  username = sha1(username);
+  password = sha1(password);
+  var userList = db.getUsers();
+  var correctCredentials = false;
+  for(var i = 0; i < userList.users.length;i++){
+    if(userList.users[i].username === username){
+      if(userList.users[i].password === password){
+        correctCredentials = true;
+        break;
+      }
+    }
+  }
+  if(correctCredentials){
+    res.status(200).send("succeeded:"+username);
+  }
+  else{
+    res.status(200).send("failed");
+  }
+})
+
+
+app.post("/register",function(req,res){
+  var password = req.body.password;
+  var displayName = req.body.username;
+  password += displayName;
+  var username = sha1(displayName);
+  password = sha1(password);
+  var userList = db.getUsers();
+  var found = false;
+  for(var i = 0; i < userList.users.length;i++){
+    if(userList.users[i].username === username){
+      found = true;
+    }
+  }
+  if(found){
+    res.status(200).send("user exists");
+  }
+  else{
+    db.registerUser(username,password, displayName);
+    res.status(200).send("user created");
+  }
+})
 
 // adds a comment
 app.post("/comment",function(req,res){
@@ -72,6 +133,9 @@ app.post("/upvoteBars",function(req,res){
   }
 
 });
+
+
+// listener
 
 app.listen(PORT,function(){
   console.log("socket to me... ");

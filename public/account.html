@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Account</title>
+  </head>
+  <body>
+    <div id = 'info'></div>
+
+
+    <script src = 'js/parse.js'></script>
+    <script>
+      function startup(response){
+        console.log(response);
+        response = JSON.parse(response);
+        document.getElementById("info").innerHTML += response.displayName;
+      }
+      if(document.cookie){
+        accountParser.src = "/accountData?key="+document.cookie;
+        accountParser.getFile(startup);
+      }
+      else{
+        window.location = "/login";
+      }
+    </script>
+
+  </body>
+</html>
